@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## How to setup
+Install PHP and Composer on your local machine, for this project I use PHP 8.2.4 and Composer version 2.5.5
+```
+composer install
+```
+After that, run this to start server
+```php
+php artisan serve
+```
+Go to localhost:8000, you will see the homepage like this, you can try crawl user profile by input https://people.php.net/. For files, you can try with https://file-examples.com/
+<img width="1920" alt="image" src="https://user-images.githubusercontent.com/81209175/235448897-6fb19f8a-a767-4911-8069-46cadce111c9.png">
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
