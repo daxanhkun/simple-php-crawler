@@ -21,13 +21,20 @@
 <main>
   <div class="container marketing mt-2">
 @if($crawl_type == 'profiles')
+<h2>Crawl Profiles</h2>
 @include('_crawl_profiles_form')
 @elseif($crawl_type == 'video')
+<h2>Crawl Video</h2>
 @include('_crawl_video_form')
 @elseif($crawl_type == 'audio')
+<h2>Crawl Audio</h2>
 @include('_crawl_audio_form')
 @elseif($crawl_type == 'image')
+<h2>Crawl Image</h2>
 @include('_crawl_image_form')
+@elseif($crawl_type == 'custom')
+<h2>Crawl Anything</h2>
+@include('_crawl_anything_form')
 @endif
 @include('results')
 
@@ -55,6 +62,12 @@
         <a href="/?crawl_type=image" class="text-decoration-none">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('images-icon.png') }}">
         <h2>Crawl Images</h2>
+       </a>
+      </div>
+      <div class="col-lg-4">
+        <a href="/?crawl_type=custom" class="text-decoration-none">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('custom-icon.png') }}">
+        <h2>Crawl Anything</h2>
        </a>
       </div>
     </div>
@@ -122,6 +135,13 @@ $(document).ready(function() {
     Loading...
   </button>
   `);
+  })
+
+  $("#download-all-btn").on('click', function(){
+  $(".download-link").each(function() {
+    var link = $(this).attr("href");
+    window.open(link, '_blank');
+  });
 })
 });
 </script>

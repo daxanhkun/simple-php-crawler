@@ -1,6 +1,6 @@
 <form id="crawl-form" action="/" method="GET">
     @csrf
-    <label for="inputField">Input Field:</label>
+    <label for="inputField">URL:</label>
     <input class="form-control" type="text" id="inputField" name="url" value="{{ $url }}" required>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="file_extension" value="mp3" id="file_extension2" checked>
